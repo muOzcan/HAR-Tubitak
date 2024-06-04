@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Websocket Uygulaması</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta charset='UTF-8'>
+    <style>
+        body {
+            background-color: #F7F9FD;
+            text-align: center;
+        }
+        .movement-group {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .movement-group h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>İvmeölçerX: <span id='ivmeX'>-</span></h1>
+    <h1>İvmeölçerY: <span id='ivmeY'>-</span></h1>
+    <h1>İvmeölçerZ: <span id='ivmeZ'>-</span></h1>
+    <h1>JiroskopX: <span id='jiroX'>-</span></h1>
+    <h1>JiroskopY: <span id='jiroY'>-</span></h1>
+    <h1>JiroskopZ: <span id='jiroZ'>-</span></h1>
+    <div id="HareketListesi">
+	
+		<div class="movement-group">
+		<h3>High Knees</h3>
+        <label><input type="checkbox" value="High Knees 1"> High Knees 1</label><br>
+        <label><input type="checkbox" value="High Knees 2"> High Knees 2</label><br>
+        <label><input type="checkbox" value="High Knees 3"> High Knees 3</label><br>
+        <label><input type="checkbox" value="High Knees 4"> High Knees 4</label><br>
+        <label><input type="checkbox" value="High Knees 5"> High Knees 5</label><br>
+        <label><input type="checkbox" value="High Knees 6"> High Knees 6</label><br>
+        <label><input type="checkbox" value="High Knees 7"> High Knees 7</label><br>
+        <label><input type="checkbox" value="High Knees 8"> High Knees 8</label><br>
+        <label><input type="checkbox" value="High Knees 9"> High Knees 9</label><br>
+        <label><input type="checkbox" value="High Knees 10"> High Knees 10</label><br>
+		</div>
+		
+		<div class="movement-group">
+        <h3>Jumping Jacks</h3>
+		<label><input type="checkbox" value="Jumping Jacks 11"> Jumping Jacks 11</label><br>
+        <label><input type="checkbox" value="Jumping Jacks 12"> Jumping Jacks 12</label><br>
+        <label><input type="checkbox" value="Jumping Jacks 13"> Jumping Jacks 13</label><br>
+        <label><input type="checkbox" value="Jumping Jacks 14"> Jumping Jacks 14</label><br>
+        <label><input type="checkbox" value="Jumping Jacks 15"> Jumping Jacks 15</label><br>
+        <label><input type="checkbox" value="Jumping Jacks 16"> Jumping Jacks 16</label><br>
+        <label><input type="checkbox" value="Jumping Jacks 17"> Jumping Jacks 17</label><br>
+        <label><input type="checkbox" value="Jumping Jacks 18"> Jumping Jacks 18</label><br>
+        <label><input type="checkbox" value="Jumping Jacks 19"> Jumping Jacks 19</label><br>
+        <label><input type="checkbox" value="Jumping Jacks 20"> Jumping Jacks 20</label><br>
+		</div>
+		
+        <div class="movement-group">
+        <h3>Şınav</h3>			
+		<label><input type="checkbox" value="Push Up 21"> Push Up 21</label><br>
+        <label><input type="checkbox" value="Push Up 22"> Push Up 22</label><br>
+        <label><input type="checkbox" value="Push Up 23"> Push Up 23</label><br>
+        <label><input type="checkbox" value="Push Up 24"> Push Up 24</label><br>
+        <label><input type="checkbox" value="Push Up 25"> Push Up 25</label><br>
+        <label><input type="checkbox" value="Push Up 26"> Push Up 26</label><br>
+        <label><input type="checkbox" value="Push Up 27"> Push Up 27</label><br>
+        <label><input type="checkbox" value="Push Up 28"> Push Up 28</label><br>
+        <label><input type="checkbox" value="Push Up 29"> Push Up 29</label><br>
+        <label><input type="checkbox" value="Push Up 30"> Push Up 30</label><br>
+		</div>
+		
+		<div class="movement-group">
+        <h3>Mekik</h3>			
+		<label><input type="checkbox" value="Sit Up 31"> Sit Up 31</label><br>
+        <label><input type="checkbox" value="Sit Up 32"> Sit Up 32</label><br>
+        <label><input type="checkbox" value="Sit Up 33"> Sit Up 33</label><br>
+        <label><input type="checkbox" value="Sit Up 34"> Sit Up 34</label><br>
+        <label><input type="checkbox" value="Sit Up 35"> Sit Up 35</label><br>
+        <label><input type="checkbox" value="Sit Up 36"> Sit Up 36</label><br>
+        <label><input type="checkbox" value="Sit Up 37"> Sit Up 37</label><br>
+        <label><input type="checkbox" value="Sit Up 38"> Sit Up 38</label><br>
+        <label><input type="checkbox" value="Sit Up 39"> Sit Up 39</label><br>
+        <label><input type="checkbox" value="Sit Up 40"> Sit Up 40</label><br>
+		</div>
+		
+		<div class="movement-group">
+        <h3>Squat</h3>
+		<label><input type="checkbox" value="Squat 41"> Squat 41</label><br>
+        <label><input type="checkbox" value="Squat 42"> Squat 42</label><br>
+        <label><input type="checkbox" value="Squat 43"> Squat 43</label><br>
+        <label><input type="checkbox" value="Squat 44"> Squat 44</label><br>
+        <label><input type="checkbox" value="Squat 45"> Squat 45</label><br>
+        <label><input type="checkbox" value="Squat 46"> Squat 46</label><br>
+        <label><input type="checkbox" value="Squat 47"> Squat 47</label><br>
+        <label><input type="checkbox" value="Squat 48"> Squat 48</label><br>
+        <label><input type="checkbox" value="Squat 49"> Squat 49</label><br>
+        <label><input type="checkbox" value="Squat 50"> Squat 50</label><br>
+		</div>
+    </div>
+    <button type='button' id='countdownButton' onclick='startCountdown()'><h1>Başla</h1></button>
+    <div id='countdownDisplay'>Geri sayım: 3</div>
+
+<script>
+    var Socket;
+    var countdownValue = 3;
+    var countdownInterval;
+    var totalSessions = 0;
+    var flag = false;
+    var allData = []; // Bütün hareketlerin verilerini tutacak
+
+    function init() {
+        Socket = new WebSocket('ws://' + 'localhost' + ':81/');
+        Socket.onmessage = function (event) {
+            processReceivedCommand(event);
+        };
+    }
+
+    function processReceivedCommand(event) {
+        var obj = JSON.parse(event.data);
+        document.getElementById('ivmeX').innerHTML = obj.accX;
+        document.getElementById('ivmeY').innerHTML = obj.accY;
+        document.getElementById('ivmeZ').innerHTML = obj.accZ;
+        document.getElementById('jiroX').innerHTML = obj.gX;
+        document.getElementById('jiroY').innerHTML = obj.gY;
+        document.getElementById('jiroZ').innerHTML = obj.gZ;
+
+        if (flag) {
+            allData.push(obj.accX, obj.accY, obj.accZ, obj.gX, obj.gY, obj.gZ);
+        }
+    }
+
+    function startCountdown() {
+        if (totalSessions >= 50) {
+            alert("Maksimum kayıt seansı sayısına ulaşıldı.");
+            return;
+        }
+
+        if (flag) {
+            alert("Lütfen önceki kaydın bitmesini bekleyin.");
+            return;
+        }
+
+        flag = true; // Veri kaydetmeye başla
+        allData = []; // Yeni hareket için veri dizisini sıfırla
+        countdownValue = 3;
+        updateCountdown();
+
+        countdownInterval = setInterval(function () {
+            countdownValue--;
+            updateCountdown();
+            if (countdownValue <= 0) {
+                clearInterval(countdownInterval);
+                flag = false; // Veri kaydetmeyi durdur
+                totalSessions++; // Kaydedilen seans sayısını artır
+                downloadCSV(); // Her hareket sonrası CSV dosyasını güncelle
+            }
+        }, 1000);
+    }
+
+    function updateCountdown() {
+        document.getElementById('countdownDisplay').innerHTML = 'Geri sayım: ' + countdownValue;
+    }
+
+    function downloadCSV() {
+        var existingContent = localStorage.getItem('csvData') || "data:text/csv;charset=utf-8,IvmeX,IvmeY,IvmeZ,JiroskopX,JiroskopY,JiroskopZ,Label\n";
+        existingContent += allData.join(",") + "\n"; // Yeni veri satırını mevcut içeriğe ekle
+        localStorage.setItem('csvData', existingContent); // Yeni içeriği sakla
+
+        if (totalSessions >= 50) {
+            var encodedUri = encodeURI(existingContent);
+            var link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "sensor_data.csv");
+            document.body.appendChild(link);
+            link.click();
+            localStorage.removeItem('csvData'); // İndirme sonrası depolanan veriyi temizle
+        }
+    }
+
+    window.onload = function(event) {
+        init();
+    }
+</script>
+</body>
+</html>
