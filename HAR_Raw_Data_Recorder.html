@@ -113,7 +113,7 @@
     var allData = []; // Bütün hareketlerin verilerini tutacak
 
     function init() {
-        Socket = new WebSocket('ws://' + 'localhost' + ':81/');
+        Socket = new WebSocket('ws://' + '192.168.137.245' + ':81/');
         Socket.onmessage = function (event) {
             processReceivedCommand(event);
         };
